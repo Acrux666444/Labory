@@ -4,8 +4,8 @@ import java.util.*;
 
 public class TravelOffice {
 
- public static Map<String ,Trip> plan = new HashMap<String, Trip>();
- public static Set<Customer> CustSet = new HashSet<Customer>();
+ public static Map<String ,Trip> plan = new HashMap<>();
+ public static Set<Customer> CustSet = new HashSet<>();
 
     public static void addCustomer (Customer cust) {
         CustSet.add(cust);
@@ -56,10 +56,14 @@ public class TravelOffice {
              System.out.println(it.next().getKey());
          }
      }
-     public void showCustomers(){
-        for(Customer cs : CustSet){
-            System.out.println(cs.toString());
-        }
+     public  Set<Customer> showCustomers(){
+        return CustSet;
+//        for(Customer cs : CustSet){
+//            System.out.println(cs.toString());
+//        }
+     }
+     public int getCustomerCount(){
+        return CustSet.size();
      }
 
 }
